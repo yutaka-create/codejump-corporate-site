@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 検索エンジンに登録させない -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>CodeJump上級編③ | Corporate Site</title>
+    <meta name="description" content="CodeJump上級編③の課題として制作した、固定サイドメニュー付きのコーポレートサイトです。">
+
+    <!-- favicon / Apple Touch Icon -->
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <!-- OGP -->
+    <meta property="og:title" content="CodeJump上級編③ | Corporate Site">
+    <meta property="og:description" content="CodeJump上級編③の課題として制作した、固定サイドメニュー付きのコーポレートサイトです。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://あなたのGitHubユーザー名.github.io/リポジトリ名/">
+    <meta property="og:image" content="https://あなたのGitHubユーザー名.github.io/リポジトリ名/img/ogp.png">
+    <meta property="og:site_name" content="CodeJump上級編③ | Corporate Site">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CodeJump上級編③ | Corporate Site">
+    <meta name="twitter:description" content="CodeJump上級編③の課題として制作した、固定サイドメニュー付きのコーポレートサイトです。">
+    <meta name="twitter:image" content="https://あなたのGitHubユーザー名.github.io/リポジトリ名/img/ogp.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top">
+    <header class="l-header">
+        <h1 class="l-header__logo c-logo">
+            <a class="c-logo__link" href="index.html" aria-label="明るいHOUSE トップページへ戻る">
+                <img class="c-logo__image" src="img/logo.svg" alt="" width="200" height="59">
+            </a>
+        </h1>
+        <div id="global-menu" class="l-header__menu js-menu">
+            <nav class="l-header__nav" aria-label="グローバルナビゲーション">
+                <ul class="l-header__nav-list">
+                    <li class="l-header__nav-item"><a class="l-header__nav-link js-nav-item" href="#">私たちについて</a></li>
+                    <li class="l-header__nav-item"><a class="l-header__nav-link js-nav-item" href="#">サービス</a></li>
+                    <li class="l-header__nav-item"><a class="l-header__nav-link js-nav-item" href="#">商品情報</a></li>
+                    <li class="l-header__nav-item"><a class="l-header__nav-link js-nav-item" href="#">展示会</a></li>
+                    <li class="l-header__nav-item"><a class="l-header__nav-link js-nav-item" href="#">暮らしの日記</a></li>
+                    <li class="l-header__nav-item"><a class="l-header__nav-link js-nav-item" href="#">会社概要</a></li>
+                </ul>
+            </nav>
+            <ul class="l-header__sns-list" aria-label="SNSリンク">
+                <li class="l-header__sns-item"><a class="l-header__sns-link js-nav-item" href="https://twitter.com/"
+                        target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li class="l-header__sns-item"><a class="l-header__sns-link js-nav-item" href="https://facebook.com/"
+                        target="_blank" rel="noopener noreferrer">facebook</a></li>
+                <li class="l-header__sns-item"><a class="l-header__sns-link js-nav-item" href="https://instagram.com/"
+                        target="_blank" rel="noopener noreferrer">instagram</a></li>
+            </ul>
+        </div>
+        <button class="l-header__btn c-hamburger js-hamburger" type="button" aria-label="メニューを開閉する"
+            aria-controls="global-menu" aria-expanded="false">
+            <span class="c-hamburger__line"></span>
+            <span class="c-hamburger__line"></span>
+            <span class="c-hamburger__line"></span>
+        </button>
+        <div class="l-header__mask js-mask"></div>
+    </header>
+    <main class="l-main">
+        <div class="p-mv">
+            <video class="p-mv__video" src="video/video.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+        </div>
+        <section class="p-project" aria-labelledby="project-heading">
+            <div class="p-project__inner l-container">
+                <h2 id="project-heading"
+                    class="p-project__heading c-section-heading c-section-heading--white js-scroll-trigger u-fade-up">
+                    建築事例を紹介
+                </h2>
+                <ul class="p-project__list">
+                    <li class="p-project__item js-scroll-trigger u-fade-up">
+                        <a class="p-project__link" href="#">
+                            <picture class="p-project__picture">
+                                <source srcset="img/project-01.webp" type="image/webp">
+                                <img class="p-project__img" src="img/project-01.jpg" alt="芝生の庭があるモダンな二階建て住宅の外観"
+                                    width="402" height="256" loading="lazy" decoding="async">
+                            </picture>
+                            <span class="p-project__label">PROJECT_01</span>
+                        </a>
+                    </li>
+                    <li class="p-project__item js-scroll-trigger u-fade-up">
+                        <a class="p-project__link" href="#">
+                            <picture class="p-project__picture">
+                                <source srcset="img/project-02.webp" type="image/webp">
+                                <img class="p-project__img" src="img/project-02.jpg" alt="海沿いに建つ白い平屋住宅の外観" width="402"
+                                    height="256" loading="lazy" decoding="async">
+                            </picture>
+                            <span class="p-project__label">PROJECT_02</span>
+                        </a>
+                    </li>
+                    <li class="p-project__item js-scroll-trigger u-fade-up">
+                        <a class="p-project__link" href="#">
+                            <picture class="p-project__picture">
+                                <source srcset="img/project-03.webp" type="image/webp">
+                                <img class="p-project__img" src="img/project-03.jpg" alt="白い箱型デザインの住宅の外観" width="402"
+                                    height="256" loading="lazy" decoding="async">
+                            </picture>
+                            <span class="p-project__label">PROJECT_03</span>
+                        </a>
+                    </li>
+                    <li class="p-project__item js-scroll-trigger u-fade-up">
+                        <a class="p-project__link" href="#">
+                            <picture class="p-project__picture">
+                                <source srcset="img/project-04.webp" type="image/webp">
+                                <img class="p-project__img" src="img/project-04.jpg" alt="張り出した屋根が特徴的な白いモダン住宅の外観"
+                                    width="402" height="256" loading="lazy" decoding="async">
+                            </picture>
+                            <span class="p-project__label">PROJECT_04</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="feature" class="p-feature" aria-labelledby="feature-heading">
+            <div class="p-feature__inner l-container">
+                <h2 id="feature-heading"
+                    class="p-feature__heading c-section-heading c-section-heading--white js-scroll-trigger u-fade-up">
+                    明るいHOUSEの特徴
+                </h2>
+                <ul class="p-feature__list">
+                    <li class="p-feature__item js-scroll-trigger u-fade-up">
+                        <a class="p-feature__link" href="#" aria-label="デザインの詳細を見る">
+                            <span class="p-feature__label">design</span>
+                        </a>
+                        <h3 class="p-feature__title">デザイン</h3>
+                        <p class="p-feature__text">テキストテキストテキスト</p>
+                    </li>
+                    <li class="p-feature__item js-scroll-trigger u-fade-up">
+                        <a class="p-feature__link" href="#" aria-label="性能の詳細を見る">
+                            <span class="p-feature__label">quality</span>
+                        </a>
+                        <h3 class="p-feature__title">性能</h3>
+                        <p class="p-feature__text">テキストテキストテキスト</p>
+                    </li>
+                    <li class="p-feature__item js-scroll-trigger u-fade-up">
+                        <a class="p-feature__link" href="#" aria-label="サポートの詳細を見る">
+                            <span class="p-feature__label">support</span>
+                        </a>
+                        <h3 class="p-feature__title">サポート</h3>
+                        <p class="p-feature__text">テキストテキストテキスト</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="flow" class="p-flow" aria-labelledby="flow-heading">
+            <div class="p-flow__inner l-container">
+                <h2 id="flow-heading" class="p-flow__heading c-section-heading js-scroll-trigger u-fade-up">
+                    家ができるまでの流れ
+                </h2>
+                <p class="p-flow__lead js-scroll-trigger u-fade-up">
+                    お問い合わせいただいてから、家が完成するまでの流れです。
+                </p>
+                <div class="p-flow__content">
+                    <ol class="p-flow__figure js-scroll-trigger u-fade-up" aria-hidden="true">
+                        <li class="p-flow__figure-item">1.ヒアリング</li>
+                        <li class="p-flow__figure-item">2.プラン提案</li>
+                        <li class="p-flow__figure-item">3.契約</li>
+                        <li class="p-flow__figure-item">4.着工</li>
+                        <li class="p-flow__figure-item">5.完成</li>
+                    </ol>
+                    <ol class="p-flow__list js-scroll-trigger u-fade-up">
+                        <li class="p-flow__item">
+                            <div class="p-flow__body">
+                                <h3 class="p-flow__title">ヒアリング</h3>
+                                <p class="p-flow__description">
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                            </div>
+                        </li>
+                        <li class="p-flow__item">
+                            <div class="p-flow__body">
+                                <h3 class="p-flow__title">プラン提案</h3>
+                                <p class="p-flow__description">
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                            </div>
+                        </li>
+                        <li class="p-flow__item">
+                            <div class="p-flow__body">
+                                <h3 class="p-flow__title">契約</h3>
+                                <p class="p-flow__description">
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                            </div>
+                        </li>
+                        <li class="p-flow__item">
+                            <div class="p-flow__body">
+                                <h3 class="p-flow__title">着工</h3>
+                                <p class="p-flow__description">
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                            </div>
+                        </li>
+                        <li class="p-flow__item">
+                            <div class="p-flow__body">
+                                <h3 class="p-flow__title">完成</h3>
+                                <p class="p-flow__description">
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="p-contact" aria-labelledby="contact-heading">
+            <div class="p-contact__inner l-container">
+                <h2 id="contact-heading" class="p-contact__heading c-section-heading js-scroll-trigger u-fade-up">
+                    お問い合わせ
+                </h2>
+                <p class="p-contact__lead js-scroll-trigger u-fade-up">
+                    お問い合わせは下記からお願いいたします。
+                </p>
+                <ul class="p-contact__list">
+                    <li class="p-contact__item js-scroll-trigger u-fade-up">
+                        <a class="p-contact__link" href="#">
+                            <img class="p-contact__icon" src="img/icon-document.svg" alt="" width="64" height="64"
+                                decoding="async" loading="lazy">
+                            <span class="p-contact__label">資料請求</span>
+                        </a>
+                    </li>
+                    <li class="p-contact__item js-scroll-trigger u-fade-up">
+                        <a class="p-contact__link" href="#">
+                            <img class="p-contact__icon" src="img/icon-web-meeting.svg" alt="" width="64" height="64"
+                                decoding="async" loading="lazy">
+                            <span class="p-contact__label">Web説明会</span>
+                        </a>
+                    </li>
+                    <li class="p-contact__item js-scroll-trigger u-fade-up">
+                        <a class="p-contact__link" href="#">
+                            <img class="p-contact__icon" src="img/icon-consultation.svg" alt="" width="64" height="64"
+                                decoding="async" loading="lazy">
+                            <span class="p-contact__label">個別相談</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="l-footer">
+        <div class="l-footer__inner">
+            <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+                <ul class="l-footer__nav-list">
+                    <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="#">私たちについて</a></li>
+                    <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="#">サービス</a></li>
+                    <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="#">商品情報</a></li>
+                    <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="#">展示会</a></li>
+                    <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="#">暮らしの日記</a></li>
+                    <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="#">会社概要</a></li>
+                </ul>
+            </nav>
+            <small class="l-footer__copyright">
+                Copyright &copy; 2021 Akarui HOUSE All Rights Reserved.
+            </small>
+        </div>
+    </footer>
+
+    <a class="c-page-top js-page-top" href="#top" aria-label="ページトップへ戻る"></a>
+
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/intersection.js"></script>
+    <script src="./js/page-top.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

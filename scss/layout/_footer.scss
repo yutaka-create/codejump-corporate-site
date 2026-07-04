@@ -1,0 +1,60 @@
+/* ===== layout / _footer.scss ===== */
+@use "../foundation/function" as f;
+@use "../foundation/vars" as v;
+@use "../foundation/mixin" as m;
+
+.l-footer {
+    margin-left: v.$layout-sidebar-width;
+    padding-block: 50px 20px;
+    color: v.$color-text-inverse;
+    background-color: v.$color-text;
+
+    @include m.mq-sp {
+        margin-left: 0;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 60px;
+        padding-inline: v.$space-container-padding-inline;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        row-gap: 10px;
+    }
+
+    &__nav-item {
+        padding-inline: 20px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid currentColor;
+        }
+    }
+
+    &__nav-link {
+        display: block;
+        font-size: f.rem(v.$font-size-14);
+        line-height: v.$line-height-121;
+    }
+
+    &__copyright {
+        display: block;
+        font-size: f.rem(v.$font-size-12);
+        line-height: v.$line-height-117;
+        text-align: center;
+    }
+}

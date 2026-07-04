@@ -1,0 +1,55 @@
+/* ===== object / component / _hamburger.scss ===== */
+@use "../../foundation/vars" as v;
+
+.c-hamburger {
+    position: relative;
+    z-index: v.$z-index-hamburger;
+    width: 30px;
+    height: 26px;
+
+    &__line {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        border-radius: 4px;
+        background-color: v.$color-text;
+        transform: translateY(-50%);
+        transition:
+            top 0.3s linear,
+            opacity 0.3s linear,
+            transform 0.3s linear,
+            background-color 0.3s linear;
+
+        &:first-child {
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            top: 50%;
+        }
+
+        &:nth-child(3) {
+            top: 100%;
+        }
+    }
+
+    &.is-open {
+        .c-hamburger__line {
+            top: 50%;
+            background-color: v.$color-white;
+
+            &:first-child {
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                transform: translateY(-50%) rotate(-45deg);
+            }
+        }
+    }
+}

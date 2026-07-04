@@ -1,0 +1,73 @@
+/* ===== object / project / _project.scss ===== */
+@use "../../foundation/function" as f;
+@use "../../foundation/vars" as v;
+@use "../../foundation/mixin" as m;
+
+.p-project {
+    padding-block: 80px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), v.$color-overlay-dark);
+
+    @include m.mq-sp {
+        padding-block: 60px;
+    }
+
+    &__heading {
+        margin-bottom: 60px;
+
+        @include m.mq-sp {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 56px;
+        row-gap: 50px;
+
+        @include m.mq-sp {
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+        }
+    }
+
+    &__link {
+        position: relative;
+        isolation: isolate;
+        display: block;
+        aspect-ratio: 402 / 256;
+        overflow: hidden;
+        border: 1px solid v.$color-white;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            box-shadow: inset 0 -30px 15px 1px rgba(18, 18, 18, 1);
+            pointer-events: none;
+        }
+    }
+
+    &__picture {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__label {
+        position: absolute;
+        left: 7px;
+        bottom: 4px;
+        z-index: 2;
+        color: v.$color-text-inverse;
+        font-size: f.rem(v.$font-size-12);
+        line-height: v.$line-height-117;
+        text-shadow: 1px 1px 2px rgb(0 0 0 / 80%);
+    }
+}

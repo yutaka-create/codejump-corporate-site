@@ -1,0 +1,131 @@
+/* ===== layout / _header.scss ===== */
+@use "../foundation/function" as f;
+@use "../foundation/vars" as v;
+@use "../foundation/mixin" as m;
+
+.l-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: v.$z-index-header;
+    width: v.$layout-sidebar-width;
+    height: 100vh;
+    height: 100svh;
+    padding: 40px 55px 40px 45px;
+    overflow-y: auto;
+    background-color: v.$color-bg-base;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @include m.mq-sp {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: v.$layout-header-height-sp;
+        padding: 0;
+        padding-inline: 18px;
+    }
+
+    &__logo {
+        width: 200px;
+        margin-bottom: 38px;
+
+        @include m.mq-sp {
+            width: 180px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__menu {
+        @include m.mq-sp {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: v.$z-index-drawer;
+            width: 300px;
+            height: 100vh;
+            height: 100svh;
+            padding: 35px 25px;
+            overflow-y: auto;
+            background-color: v.$color-bg-base;
+            scrollbar-width: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-300px);
+            transition:
+                transform 0.3s ease,
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &.is-open {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &__nav {
+        margin-bottom: 76px;
+
+        @include m.mq-sp {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__nav-list,
+    &__sns-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 19px;
+
+        @include m.mq-sp {
+            row-gap: 20px;
+        }
+    }
+
+    &__nav-link,
+    &__sns-link {
+        font-size: f.rem(v.$font-size-14);
+        line-height: v.$line-height-121;
+    }
+
+    &__btn {
+        display: none;
+
+        @include m.mq-sp {
+            display: block;
+        }
+    }
+
+    &__mask {
+        display: none;
+
+        @include m.mq-sp {
+            position: fixed;
+            inset: 0;
+            z-index: v.$z-index-mask;
+            display: block;
+            background-color: v.$color-overlay-dark;
+            opacity: 0;
+            visibility: hidden;
+            cursor: pointer;
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+
+            &.is-open {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

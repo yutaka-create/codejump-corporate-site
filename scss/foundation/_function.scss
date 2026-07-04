@@ -1,0 +1,10 @@
+/* ===== foundation / _function.scss ===== */
+@use "sass:math";
+
+@function rem($px) {
+  @if math.is-unitless($px) {
+    @return math.div($px, 16) * 1rem;
+  }
+
+  @return math.div($px, 16px) * 1rem;
+}

@@ -1,0 +1,114 @@
+/* ===== foundation / _vars.scss ===== */
+
+// ==============================
+// Color
+// ==============================
+
+// Primitive color
+$color-black: #000;
+$color-white: #fff;
+$color-text: #121212;
+$color-dark-gray: #414141;
+$color-yellow: #ffdd00;
+$color-video: #dedede;
+$color-black-80: rgba(0, 0, 0, 0.8);
+
+// Semantic color
+$color-text-main: $color-text;
+$color-text-inverse: $color-white;
+$color-bg-base: $color-white;
+$color-bg-video: $color-video;
+$color-border-main: $color-text;
+$color-overlay-dark: $color-black-80;
+
+// ==============================
+// Font Family
+// ==============================
+
+$font-family-base: "Noto Sans JP", sans-serif;
+
+// ==============================
+// Font Size
+// ==============================
+
+// Primitive font size
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-20: 20px;
+$font-size-28: 28px;
+
+// Semantic font size
+$font-size-base: $font-size-16;
+$font-size-section-title-pc: $font-size-28;
+$font-size-section-title-sp: $font-size-20;
+
+// ==============================
+// Font Weight
+// ==============================
+
+// Primitive font weights
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Semantic font weights
+$font-weight-base: $font-weight-regular;
+
+// ==============================
+// Line Height
+// ==============================
+
+// Primitive line heights
+$line-height-117: 1.17; // 12px / 14px
+$line-height-119: 1.1875; // 16px / 19px
+$line-height-120: 1.2; // 20px / 24px
+$line-height-121: 1.2143; // 14px / 17px, 28px / 34px
+
+// Semantic line heights
+$line-height-base: $line-height-119;
+$line-height-section-title-pc: $line-height-121;
+$line-height-section-title-sp: $line-height-120;
+
+// ==============================
+// Spacing
+// ==============================
+
+// Primitive spacing
+$space-20: 20px;
+$space-30: 30px;
+$space-60: 60px;
+
+// Semantic spacing
+$space-container-padding-inline: $space-20;
+$space-section-title-margin-bottom-pc: $space-60;
+$space-section-title-margin-bottom-sp: $space-30;
+
+// ==============================
+// Layout
+// ==============================
+
+// Primitive layout
+$layout-width-300: 300px;
+$layout-width-900: 900px;
+
+// Semantic layout
+$layout-sidebar-width: $layout-width-300;
+$layout-main-max-width: $layout-width-900;
+$layout-header-height-sp: 72px;
+
+// ==============================
+// Breakpoint
+// ==============================
+
+// SP: 959px以下 / PC: 960px以上
+$breakpoint-md: 960px;
+
+// ==============================
+// z-index
+// ==============================
+
+$z-index-header: 100;
+$z-index-page-top: 200;
+$z-index-mask: 300;
+$z-index-drawer: 400;
+$z-index-hamburger: 500;

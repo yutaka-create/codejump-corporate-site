@@ -1,0 +1,12 @@
+/* ===== layout / _main.scss ===== */
+@use "../foundation/vars" as v;
+@use "../foundation/mixin" as m;
+
+.l-main {
+    margin-left: v.$layout-sidebar-width;
+
+    @include m.mq-sp {
+        margin-left: 0;
+        padding-top: v.$layout-header-height-sp;
+    }
+}

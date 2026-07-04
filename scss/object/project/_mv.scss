@@ -1,0 +1,35 @@
+/* ===== object / project / _mv.scss ===== */
+@use "../../foundation/vars" as v;
+@use "../../foundation/mixin" as m;
+
+$mv-height-pc: 600px;
+
+.p-mv {
+    height: 100vh;
+    height: 100svh;
+
+    @include m.mq-sp {
+        height: calc(100vh - v.$layout-header-height-sp);
+        height: calc(100svh - v.$layout-header-height-sp);
+    }
+
+    &__video {
+        position: fixed;
+        top: 0;
+        left: v.$layout-sidebar-width;
+        z-index: -1;
+        width: calc(100% - v.$layout-sidebar-width);
+        height: 100vh;
+        height: 100svh;
+        object-fit: cover;
+
+        @include m.mq-sp {
+            top: v.$layout-header-height-sp;
+            left: 0;
+            width: 100%;
+            // .l-mainのpadding-top分を差し引き、見た目上の動画領域を600pxに合わせる
+            height: calc(100vh - v.$layout-header-height-sp);
+            height: calc(100svh - v.$layout-header-height-sp);
+        }
+    }
+}

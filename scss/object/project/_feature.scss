@@ -1,0 +1,81 @@
+@use "../../foundation/function" as f;
+@use "../../foundation/vars" as v;
+@use "../../foundation/mixin" as m;
+
+.p-feature {
+    padding-block: 80px 160px;
+    background-color: v.$color-overlay-dark;
+
+    @include m.mq-sp {
+        padding-block: 60px 120px;
+    }
+
+    &__heading {
+        margin-bottom: 60px;
+
+        @include m.mq-sp {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 43px;
+
+        @include m.mq-sp {
+            column-gap: 18px;
+        }
+    }
+
+    &__item {
+        color: v.$color-text-inverse;
+        text-align: center;
+    }
+
+    &__link {
+        position: relative;
+        isolation: isolate;
+        display: grid;
+        place-items: center;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 15px;
+        overflow: hidden;
+        border: 1px solid v.$color-white;
+        border-radius: 50%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        @include m.hover {
+            &::before {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &__label {
+        position: relative;
+        z-index: 1;
+        font-size: f.rem(v.$font-size-14);
+        line-height: v.$line-height-121;
+    }
+
+    &__title {
+        margin-bottom: 5px;
+        font-weight: v.$font-weight-bold;
+    }
+
+    &__text {
+        font-size: f.rem(v.$font-size-14);
+        line-height: v.$line-height-121;
+    }
+}
